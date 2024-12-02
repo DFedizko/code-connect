@@ -1,0 +1,46 @@
+@use '../abstract/global';
+@use '../abstract/mixins';
+
+.menu-lateral {
+    height: 868px;
+    border-radius: 8px;
+    background-color: global.$cinza-escuro;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    padding: 2.5rem 1.5rem;
+
+    .menu-lateral__logo {
+        background-color: global.$cinza-escuro;
+        padding-bottom: 1rem;
+
+        img {
+            @extend .menu-lateral__logo;
+        }
+    }
+
+    .menu-lateral__lista {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: global.$cinza-escuro;
+        gap: 3rem;
+
+        .lista__item {
+            @extend .menu-lateral__lista;
+            gap: 0;
+            
+
+            a {
+                background-color: global.$cinza-escuro;
+                text-align: center;
+                color: global.$cinza-medio;
+                
+                img, p {
+                    background-color: global.$cinza-escuro;
+                }
+            }
+        }
+    }
+}

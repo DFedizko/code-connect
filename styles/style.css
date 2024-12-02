@@ -1,0 +1,221 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+  list-style: none;
+  resize: none;
+  font-family: "Prompt", sans-serif;
+}
+
+body {
+  background-color: #00090E;
+}
+
+.menu-lateral {
+  height: 868px;
+  border-radius: 8px;
+  background-color: #171D1F;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  padding: 2.5rem 1.5rem;
+}
+.menu-lateral .menu-lateral__logo, .menu-lateral .menu-lateral__logo img {
+  background-color: #171D1F;
+  padding-bottom: 1rem;
+}
+.menu-lateral .menu-lateral__lista, .menu-lateral .menu-lateral__lista .lista__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #171D1F;
+  gap: 3rem;
+}
+.menu-lateral .menu-lateral__lista .lista__item {
+  gap: 0;
+}
+.menu-lateral .menu-lateral__lista .lista__item a {
+  background-color: #171D1F;
+  text-align: center;
+  color: #888888;
+}
+.menu-lateral .menu-lateral__lista .lista__item a img, .menu-lateral .menu-lateral__lista .lista__item a p {
+  background-color: #171D1F;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 16.666% 83.333%;
+  width: 80%;
+  margin: 0 auto;
+  -moz-column-gap: 1.75rem;
+       column-gap: 1.75rem;
+  padding-block: 3.5rem;
+}
+body .menu-lateral .botao-publicar {
+  border-color: #81FE88;
+  color: #81FE88;
+  font-size: 1.25rem;
+  background-color: transparent;
+  width: 100%;
+  border: 1px solid;
+  border-radius: 8px;
+  padding-block: 0.5rem;
+  cursor: pointer;
+}
+body .principal {
+  height: 677px;
+  padding: 2rem;
+  background-color: #171D1F;
+  border-radius: 8px;
+  display: flex;
+  gap: 1.5rem;
+}
+body .principal .principal__secao, body .principal .principal__formulario {
+  width: 50%;
+  background-color: #171D1F;
+}
+body .principal .principal__secao .container-imagem, body .principal .principal__formulario .container-imagem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem 1rem;
+  border-radius: 8px;
+  background-color: #888888;
+}
+body .principal .principal__secao .container-imagem .secao__imagem, body .principal .principal__formulario .container-imagem .secao__imagem {
+  width: 100%;
+  border-radius: 8px;
+  background-color: #888888;
+}
+body .principal .principal__secao .botao-carregar, body .principal .principal__formulario .botao-carregar {
+  border-color: #888888;
+  color: #888888;
+  font-size: 1.125rem;
+  background-color: transparent;
+  width: 100%;
+  border: 1px solid;
+  border-radius: 8px;
+  padding-block: 0.5rem;
+  cursor: pointer;
+  font-weight: 600;
+  margin-block: 1rem;
+}
+body .principal .principal__secao .botao-carregar svg, body .principal .principal__formulario .botao-carregar svg {
+  background-color: transparent;
+}
+body .principal .principal__secao .botao-carregar svg path, body .principal .principal__formulario .botao-carregar svg path {
+  fill: #888888;
+}
+body .principal .principal__secao .secao__descricao, body .principal .principal__formulario .secao__descricao {
+  font-size: 0.938rem;
+  color: #888888;
+  background-color: transparent;
+  cursor: pointer;
+  width: auto;
+  display: inline-block;
+}
+body .principal .principal__secao .secao__descricao img, body .principal .principal__formulario .secao__descricao img {
+  background-color: transparent;
+}
+body .principal .principal__formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+body .principal .principal__formulario .formulario__titulo, body .principal .principal__formulario .formulario-label__subtitulo {
+  color: #E1E1E1;
+}
+body .principal .principal__formulario .formulario__titulo {
+  font-size: 1.625rem;
+  font-weight: 600;
+  padding-bottom: 1rem;
+}
+body .principal .principal__formulario .formulario-label__subtitulo {
+  font-weight: 400;
+  font-size: 1.125rem;
+  padding-bottom: 0.25rem;
+}
+body .principal .principal__formulario .formulario-label__input, body .principal .principal__formulario .tags .tag, body .principal .principal__formulario .formulario-label__textarea {
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  background-color: #888888;
+  padding: 0.5rem 1rem;
+  font-size: 1.125rem;
+  color: #171D1F;
+}
+body .principal .principal__formulario .formulario-label__textarea::-moz-placeholder {
+  font-family: "Prompt", sans-serif;
+  font-size: 0.938rem;
+}
+body .principal .principal__formulario .formulario-label__input, body .principal .principal__formulario .tags .tag, body .principal .principal__formulario .formulario-label__textarea::placeholder {
+  font-family: "Prompt", sans-serif;
+  font-size: 0.938rem;
+}
+body .principal .principal__formulario .tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1.25rem;
+  gap: 1rem;
+}
+body .principal .principal__formulario .tags .tag {
+  padding: 0.25rem 0.5rem;
+  width: auto;
+  cursor: pointer;
+}
+body .principal .principal__formulario .tags .tag .tag__nome {
+  font-size: 1.125rem;
+  color: #171D1F;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+body .principal .principal__formulario .tags .tag .tag__nome svg {
+  background-color: transparent;
+}
+body .principal .principal__formulario .tags .tag .tag__nome svg path {
+  fill: #171D1F;
+}
+body .principal .principal__formulario .tags .tag:nth-child(2) {
+  background-color: #BCBCBC;
+}
+body .principal .principal__formulario .container-botoes {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+body .principal .principal__formulario .container-botoes .botao-descartar {
+  border-color: #81FE88;
+  color: #81FE88;
+  font-size: 1.125rem;
+  background-color: transparent;
+  width: 50%;
+  border: 1px solid;
+  border-radius: 8px;
+  padding-block: 0.5rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+body .principal .principal__formulario .container-botoes .botao-publicar {
+  border-color: none;
+  color: #132E35;
+  font-size: 1.125rem;
+  background-color: #81FE88;
+  width: 50%;
+  border: 1px solid;
+  border-radius: 8px;
+  padding-block: 0.5rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+@media screen and (min-width: 1440px) {
+  body {
+    width: 65%;
+    margin: 0 auto;
+  }
+}/*# sourceMappingURL=style.css.map */

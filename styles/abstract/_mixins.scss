@@ -1,0 +1,23 @@
+@mixin centralizar($largura) {
+    width: $largura;
+    margin: 0 auto;
+}
+
+@mixin btn-bc-c-fs-bg-w($cor-da-borda, $cor, $font-size, $cor-de-fundo, $width) {
+    border-color: $cor-da-borda;
+    color: $cor;
+    font-size: $font-size;
+    background-color: $cor-de-fundo;
+    width: $width;
+    border: 1px solid;
+    border-radius: 8px;
+    padding-block: .5rem;
+    cursor: pointer;
+}
+
+@mixin svg-color ($cor) {
+    background-color: transparent;
+    path {
+        fill: $cor;
+    }  
+}

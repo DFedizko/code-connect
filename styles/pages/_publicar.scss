@@ -1,0 +1,160 @@
+@use '../abstract/global';
+@use '../abstract/mixins';
+@use '../components/aside';
+
+body {
+    display: grid;
+    grid-template-columns: 16.666% 83.333%;
+    @include mixins.centralizar(80%);
+    column-gap: 1.75rem;
+    padding-block: 3.5rem;
+
+    .menu-lateral {
+        
+        .botao-publicar {
+            @include mixins.btn-bc-c-fs-bg-w(global.$verde-destaque, global.$verde-destaque, 1.25rem, transparent, 100%);
+        }
+    }
+
+    .principal {
+        height: 677px;
+        padding: 2rem;
+        background-color: global.$cinza-escuro;
+        border-radius: 8px;
+        display: flex;
+        gap: 1.5rem;
+
+        .principal__secao {
+            width: 50%;
+            background-color: global.$cinza-escuro;
+
+            .container-imagem {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 1.5rem 1rem;
+                border-radius: 8px;
+                background-color: global.$cinza-medio;
+
+                .secao__imagem {
+                    width: 100%;
+                    border-radius: 8px;
+                    background-color: global.$cinza-medio;
+                }
+            }
+
+            .botao-carregar {
+                @include mixins.btn-bc-c-fs-bg-w(global.$cinza-medio, global.$cinza-medio, 1.125rem, transparent, 100%);
+                font-weight: 600;
+                margin-block: 1rem;
+
+                svg {
+                    @include mixins.svg-color(global.$cinza-medio);
+                } 
+            }
+
+            .secao__descricao {
+                font-size: 0.938rem; //15px
+                color: global.$cinza-medio;
+                background-color: transparent;
+                cursor: pointer;
+                width: auto;
+                display: inline-block;
+
+                img {
+                    background-color: transparent;
+                }
+            }
+        }
+
+        .principal__formulario {
+            @extend .principal__secao;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            .formulario__titulo, .formulario-label__subtitulo {
+                color: global.$off-white;
+            }
+
+            .formulario__titulo {
+                font-size: 1.625rem; //26px
+                font-weight: 600;
+                padding-bottom: 1rem;
+            }
+
+            .formulario-label__subtitulo {
+                font-weight: 400;
+                font-size: 1.125rem;
+                padding-bottom: .25rem;
+            }
+
+            .formulario-label__input, .formulario-label__textarea {
+                width: 100%;
+                border: none;
+                border-radius: 8px;
+                background-color: global.$cinza-medio;
+                padding: .5rem 1rem;
+                font-size: 1.125rem;
+                color: global.$cinza-escuro;
+            }
+
+            .formulario-label__input, .formulario-label__textarea::placeholder {
+                font-family: global.$fonte-principal;
+                font-size: 0.938rem;
+            }
+
+            .tags {
+                display: flex;
+                flex-wrap: wrap;
+                margin-top: 1.25rem;
+                gap: 1rem;
+
+                .tag {
+                    @extend .formulario-label__input;
+                    padding: .25rem .5rem;
+                    width: auto;
+                    cursor: pointer;
+
+                    .tag__nome {
+                        font-size: 1.125rem;
+                        color: global.$cinza-escuro;
+                        display: flex;
+                        align-items: center;
+                        gap: .5rem;
+
+                        svg {
+                            @include mixins.svg-color(global.$cinza-escuro);
+                        }
+                    }
+                }
+
+                .tag:nth-child(2) {
+                    background-color: global.$cinza-claro;
+                }
+            }
+
+            .container-botoes {
+                display: flex;
+                gap: 1.5rem;
+                margin-top: 1.5rem;
+
+                .botao-descartar {
+                    @include mixins.btn-bc-c-fs-bg-w(global.$verde-destaque, global.$verde-destaque, 1.125rem, transparent, 50%);
+                    font-weight: 600;
+                }
+
+                .botao-publicar {
+                    @include mixins.btn-bc-c-fs-bg-w(none, global.$verde-petroleo, 1.125rem, global.$verde-destaque, 50%);
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    body {
+        @include mixins.centralizar(65%);
+    }
+}

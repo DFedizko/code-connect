@@ -1,0 +1,28 @@
+// VARIÁVEIS
+$off-white: #E1E1E1;
+$cinza-claro: #BCBCBC;
+$cinza-medio: #888888;
+$cinza: #3E3E3F;
+$cinza-escuro: #171D1F;
+$grafite: #00090E;
+$verde-petroleo: #132E35;
+$verde-pastel: #BFFFC3;
+$verde-destaque: #81FE88;
+
+$fonte-principal: 'Prompt', sans-serif;
+
+// RESET CSS
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    list-style: none;
+    resize: none;
+    font-family: $fonte-principal;
+}
+
+body {
+    background-color: $grafite;
+}

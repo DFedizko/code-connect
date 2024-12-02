@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>CodeConnect</title>
+</head>
+
+<body>
+    <aside class="menu-lateral">
+        <a class="menu-lateral__logo" href="#"><img src="./img/Logo.svg" alt="Logo"></a>
+
+        <button class="botao-publicar" type="submit">Publicar</button>
+        
+        <ul class="menu-lateral__lista">
+            <li class="lista__item">
+                <a href="#">
+                    <img src="./img/feed.svg" alt="Ícone do Feed">
+                    <p class="item__descricao">Feed</p>
+                </a>
+            </li>
+            <li class="lista__item">
+                <a href="#">
+                    <img src="./img/account_circle.svg" alt="ícone de Conta">
+                    <p class="item__descricao">Perfil</p>
+                </a>
+            </li>
+            <li class="lista__item">
+                <a href="#">
+                    <img src="./img/info.svg" alt="Ícone de Informação">
+                    <p class="item__descricao">Sobre Nós</p>
+                </a>
+            </li>
+            <li class="lista__item">
+                <a href="#">
+                    <img src="./img/logout.svg" alt="Ícone de Sair">
+                    <p class="item__descricao">Sair</p>
+                </a>
+            </li>
+        </ul>
+    </aside>
+
+    <main class="principal">
+        <section class="principal__secao">
+
+            <div class="container-imagem">
+                <img class="secao__imagem" src="./img/imagem1.png" alt="Dashboard">
+            </div>
+
+            <button class="botao-carregar" type="submit">Carregar imagem
+                <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.761719 8.01172L6 2.73828L11.2383 8.01172H8.25V12.5117H3.75V8.01172H0.761719ZM0.761719 0.488281H11.2383V2H0.761719V0.488281Z" fill="#132E35"/>
+                </svg>                    
+            </button>
+            <p class="secao__descricao">image_projeto.png
+                <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.86523 1.01367L5.37891 4.5L8.86523 7.98633L7.98633 8.86523L4.5 5.37891L1.01367 8.86523L0.134766 7.98633L3.62109 4.5L0.134766 1.01367L1.01367 0.134766L4.5 3.62109L7.98633 0.134766L8.86523 1.01367Z" fill="#888888"/>
+                </svg>
+            </p>
+        </section>
+
+        <form class="principal__formulario">
+            <h2 class="formulario__titulo">Novo projeto</h2>
+            <label class="formulario-label">
+                <h3 class="formulario-label__subtitulo">Nome do projeto</h3>
+                <input class="formulario-label__input" type="text" placeholder="Digite o nome aqui">
+            </label>
+
+            <label class="formulario-label">
+                <h3 class="formulario-label__subtitulo">Descrição</h3>
+                <textarea class="formulario-label__textarea" rows="5" placeholder="Descreva seu projeto"></textarea>
+            </label>
+
+            <label class="formulario-label">
+                <h3 class="formulario-label__subtitulo">Tags</h3>
+                <input class="formulario-label__input" type="text" placeholder="Adicione uma tag">
+
+                <ul class="tags">
+                    <li class="tag">
+                        <p class="tag__nome">
+                            Front-end
+                            <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.86523 1.01367L5.37891 4.5L8.86523 7.98633L7.98633 8.86523L4.5 5.37891L1.01367 8.86523L0.134766 7.98633L3.62109 4.5L0.134766 1.01367L1.01367 0.134766L4.5 3.62109L7.98633 0.134766L8.86523 1.01367Z" fill="#888888"/>
+                            </svg>      
+                        </p>
+                    </li>
+                    <li class="tag">
+                        <p class="tag__nome">
+                            Front-end
+                        </p>
+                    </li>
+                    <li class="tag">
+                        <p class="tag__nome">
+                            Front-end
+                        </p>
+                    </li>
+                    <li class="tag">
+                        <p class="tag__nome">
+                            Front-end
+                        </p>
+                    </li>
+                    <li class="tag">
+                        <p class="tag__nome">
+                            Front-end
+                        </p>
+                    </li>
+                    <li class="tag">
+                        <p class="tag__nome">
+                            Front-end
+                        </p>
+                    </li>
+                </ul>    
+            </label>
+
+            <div class="container-botoes">
+                <button class="botao-descartar">
+                    Descartar
+                    <img src="./img/trash.svg" alt="Descartar">
+                </button>
+
+                <button class="botao-publicar">
+                    Publicar
+                    <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.761719 8.01172L6 2.73828L11.2383 8.01172H8.25V12.5117H3.75V8.01172H0.761719ZM0.761719 0.488281H11.2383V2H0.761719V0.488281Z" fill="#132E35"/>
+                    </svg>  
+                </button>
+            </div>
+
+        </form>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
