@@ -1,0 +1,104 @@
+@use '../abstract/variables';
+@use '../abstract/mixins';
+
+.navegacao {
+    display: none;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr auto;
+    row-gap: 1rem;
+    padding-block: 4rem;
+
+    .container-busca {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        background-color: variables.$cinza-escuro;
+        width: 100%;
+        border-radius: 4px;
+        padding: .5rem 1rem;
+        grid-area: 1 / 1 / 2 / 3;
+
+        .navegacao__busca {
+            background-color: transparent;
+            border: none;
+            font-size: 1.25rem;
+            color: variables.$cinza-claro;
+            width: 100%;
+        }
+
+        .navegacao__busca::placeholder {
+            color: variables.$cinza-claro;
+            font-size: 1.25rem;
+        }
+    }
+    
+    .navegacao__tags {
+        grid-area: 2 / 1 / 3 / 2;
+        display: flex;
+        gap: 1rem;
+        overflow-x: auto;
+        max-width: 95%;
+
+        .tag {
+            background-color: variables.$cinza-medio;
+            border-radius: 4px;
+            padding: .25rem .5rem;
+            width: auto;
+            cursor: pointer;
+
+            .tag__nome {
+                font-size: 1.125rem;
+                color: variables.$cinza-escuro;
+                display: flex;
+                align-items: center;
+                gap: .5rem;
+                white-space: nowrap;
+
+                svg {
+                    @include mixins.svg-color(variables.$cinza-escuro);
+                }
+            }
+        }
+
+        .tag-clara {
+            background-color: variables.$cinza-claro;
+        }
+    }
+
+    .navegacao__texto {
+        font-size: 1.125rem;
+        color: variables.$cinza-medio;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navegacao {
+        padding-block: 3rem;
+        text-align: center;
+
+        .container-busca {
+
+            .navegacao__busca, 
+            .navegacao__busca::placeholder {
+                font-size: 0.938rem; //15px
+            }
+        }
+
+        .navegacao__tags {
+            padding-block: 1rem;
+            max-width: 100%;
+
+            .tag {
+
+                .tag__nome {
+                    font-size: 0.938rem; //15px
+                }
+            }
+        }
+        
+        .navegacao__texto {
+            font-size: 0.938rem; //15px
+            display: inline-block;
+        }
+    }
+}

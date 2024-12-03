@@ -10,19 +10,3 @@ $verde-pastel: #BFFFC3;
 $verde-destaque: #81FE88;
 
 $fonte-principal: 'Prompt', sans-serif;
-
-// RESET CSS
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    outline: none;
-    text-decoration: none;
-    list-style: none;
-    resize: none;
-    font-family: $fonte-principal;
-}
-
-body {
-    background-color: $grafite;
-}

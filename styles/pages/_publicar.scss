@@ -1,32 +1,36 @@
-@use '../abstract/global';
+@use '../abstract/variables';
+@use '../abstract/reset';
 @use '../abstract/mixins';
 @use '../components/aside';
+@use '../components/header';
+@use '../components/nav';
+@use '../components/footer';
 
 body {
     display: grid;
-    grid-template-columns: 16.666% 83.333%;
-    @include mixins.centralizar(80%);
+    grid-template-columns: 13% 1fr;
+    @include mixins.centralizar(65%);
     column-gap: 1.75rem;
     padding-block: 3.5rem;
 
     .menu-lateral {
         
         .botao-publicar {
-            @include mixins.btn-bc-c-fs-bg-w(global.$verde-destaque, global.$verde-destaque, 1.25rem, transparent, 100%);
+            @include mixins.btn-bc-c-fs-bg-w(variables.$verde-destaque, variables.$verde-destaque, 1.25rem, transparent, 100%);
         }
     }
 
     .principal {
         height: 677px;
         padding: 2rem;
-        background-color: global.$cinza-escuro;
+        background-color: variables.$cinza-escuro;
         border-radius: 8px;
         display: flex;
         gap: 1.5rem;
 
         .principal__secao {
             width: 50%;
-            background-color: global.$cinza-escuro;
+            background-color: variables.$cinza-escuro;
 
             .container-imagem {
                 display: flex;
@@ -34,28 +38,28 @@ body {
                 justify-content: center;
                 padding: 1.5rem 1rem;
                 border-radius: 8px;
-                background-color: global.$cinza-medio;
+                background-color: variables.$cinza-medio;
 
                 .secao__imagem {
                     width: 100%;
                     border-radius: 8px;
-                    background-color: global.$cinza-medio;
+                    background-color: variables.$cinza-medio;
                 }
             }
 
             .botao-carregar {
-                @include mixins.btn-bc-c-fs-bg-w(global.$cinza-medio, global.$cinza-medio, 1.125rem, transparent, 100%);
+                @include mixins.btn-bc-c-fs-bg-w(variables.$cinza-medio, variables.$cinza-medio, 1.125rem, transparent, 100%);
                 font-weight: 600;
                 margin-block: 1rem;
 
                 svg {
-                    @include mixins.svg-color(global.$cinza-medio);
+                    @include mixins.svg-color(variables.$cinza-medio);
                 } 
             }
 
             .secao__descricao {
                 font-size: 0.938rem; //15px
-                color: global.$cinza-medio;
+                color: variables.$cinza-medio;
                 background-color: transparent;
                 cursor: pointer;
                 width: auto;
@@ -74,7 +78,7 @@ body {
             gap: 1rem;
 
             .formulario__titulo, .formulario-label__subtitulo {
-                color: global.$off-white;
+                color: variables.$off-white;
             }
 
             .formulario__titulo {
@@ -92,16 +96,17 @@ body {
             .formulario-label__input, .formulario-label__textarea {
                 width: 100%;
                 border: none;
-                border-radius: 8px;
-                background-color: global.$cinza-medio;
+                border-radius: 4px;
+                background-color: variables.$cinza-medio;
                 padding: .5rem 1rem;
-                font-size: 1.125rem;
-                color: global.$cinza-escuro;
+                font-size: 0.938rem; //15px
+                color: variables.$cinza-escuro;
             }
 
-            .formulario-label__input, .formulario-label__textarea::placeholder {
-                font-family: global.$fonte-principal;
-                font-size: 0.938rem;
+            .formulario-label__input::placeholder, .formulario-label__textarea::placeholder {
+                font-family: variables.$fonte-principal;
+                font-size: 0.938rem; //15px
+                color: variables.$cinza-escuro;
             }
 
             .tags {
@@ -109,6 +114,8 @@ body {
                 flex-wrap: wrap;
                 margin-top: 1.25rem;
                 gap: 1rem;
+                overflow-y: auto;
+                max-height: 90px;
 
                 .tag {
                     @extend .formulario-label__input;
@@ -118,19 +125,19 @@ body {
 
                     .tag__nome {
                         font-size: 1.125rem;
-                        color: global.$cinza-escuro;
+                        color: variables.$cinza-escuro;
                         display: flex;
                         align-items: center;
                         gap: .5rem;
 
                         svg {
-                            @include mixins.svg-color(global.$cinza-escuro);
+                            @include mixins.svg-color(variables.$cinza-escuro);
                         }
                     }
                 }
 
-                .tag:nth-child(2) {
-                    background-color: global.$cinza-claro;
+                .tag-clara {
+                    background-color: variables.$cinza-claro;
                 }
             }
 
@@ -140,12 +147,12 @@ body {
                 margin-top: 1.5rem;
 
                 .botao-descartar {
-                    @include mixins.btn-bc-c-fs-bg-w(global.$verde-destaque, global.$verde-destaque, 1.125rem, transparent, 50%);
+                    @include mixins.btn-bc-c-fs-bg-w(variables.$verde-destaque, variables.$verde-destaque, 1.125rem, transparent, 50%);
                     font-weight: 600;
                 }
 
                 .botao-publicar {
-                    @include mixins.btn-bc-c-fs-bg-w(none, global.$verde-petroleo, 1.125rem, global.$verde-destaque, 50%);
+                    @include mixins.btn-bc-c-fs-bg-w(none, variables.$verde-petroleo, 1.125rem, variables.$verde-destaque, 50%);
                     font-weight: 600;
                 }
             }
@@ -153,8 +160,73 @@ body {
     }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (max-width: 1440px) {
     body {
-        @include mixins.centralizar(65%);
+        @include mixins.centralizar(80%);
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    body {
+        display: block;
+        width: 100%;
+        padding: 3.5rem 0 0 0;
+
+        .cabecalho {
+            display: flex;
+            @include mixins.centralizar(85%);
+            
+        }
+    
+        .navegacao {
+            display: grid;
+            @include mixins.centralizar(85%);
+        }
+    
+        .menu-lateral {
+            display: none;
+        }
+    
+        .principal {
+            height: auto;
+            padding: 0;
+            flex-direction: column;
+            background-color: transparent;
+            @include mixins.centralizar(85%);
+
+            .principal__secao {
+                width: 100%;
+                background-color: transparent;
+            }
+
+            .principal__formulario {
+
+                .formulario__titulo {
+                    padding-bottom: 2rem;
+                }
+            }
+        }
+
+        .rodape {
+            display: block;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+
+        .cabecalho {
+            @include mixins.centralizar(90%);
+        }
+
+        .navegacao {
+            display: block;
+            @include mixins.centralizar(90%);
+        }
+
+        .principal {
+            @include mixins.centralizar(90%);
+        }
     }
 }

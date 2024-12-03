@@ -16,7 +16,6 @@
 }
 
 @mixin svg-color ($cor) {
-    background-color: transparent;
     path {
         fill: $cor;
     }  

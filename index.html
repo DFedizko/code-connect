@@ -14,6 +14,38 @@
 </head>
 
 <body>
+    <header class="cabecalho">
+        <a class="menu-lateral__logo" href="#"><img src="./img/Logo.svg" alt="Logo"></a>
+        <button class="botao-publicar" type="submit">Publicar</button>
+    </header>
+
+    <nav class="navegacao">
+        <div class="container-busca">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4.4375 13.4375C5.60417 14.6042 7.02083 15.1875 8.6875 15.1875C10.3542 15.1875 11.7708 14.6042 12.9375 13.4375C14.1042 12.2708 14.6875 10.8542 14.6875 9.1875C14.6875 7.52083 14.1042 6.10417 12.9375 4.9375C11.7708 3.77083 10.3542 3.1875 8.6875 3.1875C7.02083 3.1875 5.60417 3.77083 4.4375 4.9375C3.27083 6.10417 2.6875 7.52083 2.6875 9.1875C2.6875 10.8542 3.27083 12.2708 4.4375 13.4375ZM16.6875 15.1875L23.3125 21.8125L21.3125 23.8125L14.6875 17.1875V16.125L14.3125 15.75C12.7292 17.125 10.8542 17.8125 8.6875 17.8125C6.27083 17.8125 4.20833 16.9792 2.5 15.3125C0.833333 13.6458 0 11.6042 0 9.1875C0 6.77083 0.833333 4.72917 2.5 3.0625C4.20833 1.35417 6.27083 0.5 8.6875 0.5C11.1042 0.5 13.1458 1.35417 14.8125 3.0625C16.4792 4.72917 17.3125 6.77083 17.3125 9.1875C17.3125 10.0625 17.1042 11.0625 16.6875 12.1875C16.2708 13.2708 15.7917 14.1458 15.25 14.8125L15.625 15.1875H16.6875Z" fill="#BCBCBC"/>
+            </svg>
+            <input class="navegacao__busca" type="text" placeholder="Digite o que você procura">
+        </div>
+
+        <ul class="navegacao__tags">
+            <li class="tag">
+                <p class="tag__nome">Front-end
+                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.86523 1.01367L5.37891 4.5L8.86523 7.98633L7.98633 8.86523L4.5 5.37891L1.01367 8.86523L0.134766 7.98633L3.62109 4.5L0.134766 1.01367L1.01367 0.134766L4.5 3.62109L7.98633 0.134766L8.86523 1.01367Z" fill="#888888"/>
+                    </svg>      
+                </p>
+            </li>
+            <li class="tag tag-clara">
+                <p class="tag__nome">React</p>
+            </li>
+            <li class="tag tag-clara">
+                <p class="tag__nome">Acessibilidade</p>
+            </li>
+        </ul>
+
+        <p class="navegacao__texto">Limpar Tudo</p>
+    </nav>
+
     <aside class="menu-lateral">
         <a class="menu-lateral__logo" href="#"><img src="./img/Logo.svg" alt="Logo"></a>
 
@@ -75,7 +107,7 @@
 
             <label class="formulario-label">
                 <h3 class="formulario-label__subtitulo">Descrição</h3>
-                <textarea class="formulario-label__textarea" rows="5" placeholder="Descreva seu projeto"></textarea>
+                <textarea class="formulario-label__textarea" rows="6" placeholder="Descreva seu projeto"></textarea>
             </label>
 
             <label class="formulario-label">
@@ -84,37 +116,14 @@
 
                 <ul class="tags">
                     <li class="tag">
-                        <p class="tag__nome">
-                            Front-end
+                        <p class="tag__nome">Front-end
                             <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M8.86523 1.01367L5.37891 4.5L8.86523 7.98633L7.98633 8.86523L4.5 5.37891L1.01367 8.86523L0.134766 7.98633L3.62109 4.5L0.134766 1.01367L1.01367 0.134766L4.5 3.62109L7.98633 0.134766L8.86523 1.01367Z" fill="#888888"/>
                             </svg>      
                         </p>
                     </li>
-                    <li class="tag">
-                        <p class="tag__nome">
-                            Front-end
-                        </p>
-                    </li>
-                    <li class="tag">
-                        <p class="tag__nome">
-                            Front-end
-                        </p>
-                    </li>
-                    <li class="tag">
-                        <p class="tag__nome">
-                            Front-end
-                        </p>
-                    </li>
-                    <li class="tag">
-                        <p class="tag__nome">
-                            Front-end
-                        </p>
-                    </li>
-                    <li class="tag">
-                        <p class="tag__nome">
-                            Front-end
-                        </p>
+                    <li class="tag tag-clara">
+                        <p class="tag__nome">Front-end</p>
                     </li>
                 </ul>    
             </label>
@@ -135,6 +144,35 @@
 
         </form>
     </main>
+
+    <footer class="rodape">
+        <ul class="rodape__lista">
+            <li class="lista__item">
+                <a href="#">
+                    <img src="./img/feed.svg" alt="Ícone do Feed">
+                    <p class="item__descricao">Feed</p>
+                </a>
+            </li>
+            <li class="lista__item">
+                <a href="#">
+                    <img src="./img/account_circle.svg" alt="ícone de Conta">
+                    <p class="item__descricao">Perfil</p>
+                </a>
+            </li>
+            <li class="lista__item">
+                <a href="#">
+                    <img src="./img/info.svg" alt="Ícone de Informação">
+                    <p class="item__descricao">Sobre Nós</p>
+                </a>
+            </li>
+            <li class="lista__item">
+                <a href="#">
+                    <img src="./img/logout.svg" alt="Ícone de Sair">
+                    <p class="item__descricao">Sair</p>
+                </a>
+            </li>
+        </ul>
+    </footer>
 
     <script src="script.js"></script>
 </body>

@@ -1,0 +1,32 @@
+@use '../abstract/variables';
+@use '../abstract/mixins';
+
+.rodape {
+    display: none;
+    margin-top: 5.5rem;
+    background-color: variables.$cinza-escuro;
+    padding-block: 3rem;
+    border-radius: 8px 8px 0px 0px;
+
+    .rodape__lista {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: center;
+        
+        .lista__item {
+
+            .item__descricao {
+                color: variables.$cinza-medio;
+                font-size: 1.25rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .rodape {
+        padding-block: 2rem;
+        margin-top: 3.5rem;
+    }
+}
