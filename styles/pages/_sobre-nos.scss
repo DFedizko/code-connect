@@ -1,2 +1,180 @@
 @use '../abstract/variables';
 @use '../abstract/mixins';
+
+body {
+    overflow: auto;
+    padding: 3.5rem 0 0 0;
+
+    .menu-lateral {
+        height: auto;
+    }
+
+    .principal {
+        padding: 0;
+        background-color: transparent;
+        flex-direction: column;
+        height: auto;
+        gap: 3.5rem;
+
+        .principal__imagem {
+            width: 100%;
+            height: 397px;
+        }
+        
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            .principal__titulo {
+                color: variables.$verde-destaque;
+                font-weight: 500;
+                font-size: 2.75rem;
+                text-align: center;
+            }
+    
+            .principal__subtitulo {
+                color: variables.$cinza-claro;
+                text-align: center;
+                font-weight: 500;
+                font-size: 2.25rem;
+            }
+        }
+
+
+        .principal__descricao {
+            color: variables.$off-white;
+            font-size: 1.5rem;
+        }
+
+        .principal__container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto;
+            grid-template-areas: 
+            "subtitulo imagem"
+            "texto     imagem";
+            column-gap: 3.5rem;
+            row-gap: 1.5rem;
+
+            .container__subtitulo {
+                grid-area: subtitulo;
+                color: variables.$cinza-claro;
+                font-size: 2rem;
+                font-weight: 600;
+            }
+            
+            .container__descricao {
+                @extend .principal__descricao;
+                grid-area: texto;
+            }
+
+            .container__imagem {
+                grid-area: imagem;
+                justify-self: self-end;
+                align-self: center;
+                height: 100%;
+                width: 100%;
+            }
+        }
+
+        .principal__intertitulo {
+            color: variables.$cinza-claro;
+            font-size: 2rem;
+            font-weight: 600;
+        }
+
+        .container-final {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 5rem;
+
+            .final__descricao {
+                font-size: 2rem;
+                color: variables.$cinza-medio;
+            }
+        }
+    }
+
+    
+}
+
+@media screen and (max-width: 1024px) {
+    body {
+        .cabecalho {
+            margin-bottom: 4rem;
+        }
+
+        .principal {
+
+            .principal__container {
+                column-gap: 1.5rem;
+            }
+
+            .container-final {
+                margin: 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        .cabecalho {
+            margin-bottom: 3rem;
+        }
+
+        .principal {
+
+            .container {
+
+                .principal__titulo {
+                    font-size: 2.25rem;
+                }
+
+                .principal__subtitulo {
+                    font-size: 2rem;
+                }
+            }
+
+            .principal__descricao {
+                font-size: 1.125rem;
+            }
+
+            .principal__container {
+                display: flex;
+                flex-direction: column;
+
+                .container__subtitulo {
+                    font-size: 1.375rem;
+                }
+
+                .container__descricao {
+                    font-size: 1.125rem;
+                }
+            }
+
+            .principal__intertitulo {
+                font-size: 1.375rem;
+            }
+
+            .principal__descricao {
+                font-size: 1.125rem;
+            }
+
+            .container-final {
+                flex-direction: column;
+                gap: 1rem;
+
+                .final__descricao {
+                    font-size: 1.375rem;
+                }
+            }
+        }
+
+        .rodape {
+            margin-top: 5.25rem;
+        }
+    }
+}
