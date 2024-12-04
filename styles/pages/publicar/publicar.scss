@@ -1,10 +1,10 @@
-@use '../abstract/variables';
-@use '../abstract/reset';
-@use '../abstract/mixins';
-@use '../components/aside';
-@use '../components/header';
-@use '../components/nav';
-@use '../components/footer';
+@use '../../abstracts/variables';
+@use '../../abstracts/reset';
+@use '../../abstracts/mixins';
+@use '../../components/aside';
+@use '../../components/header';
+@use '../../components/nav';
+@use '../../components/footer';
 
 body {
     display: grid;
