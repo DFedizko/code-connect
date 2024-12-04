@@ -22,22 +22,15 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-color: variables.$cinza-escuro;
         gap: 3rem;
 
         .lista__item {
             @extend .menu-lateral__lista;
             gap: 0;
             
-
             a {
-                background-color: variables.$cinza-escuro;
                 text-align: center;
                 color: variables.$cinza-medio;
-                
-                img, p {
-                    background-color: variables.$cinza-escuro;
-                }
             }
         }
     }
