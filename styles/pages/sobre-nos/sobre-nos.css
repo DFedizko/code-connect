@@ -1,6 +1,6 @@
 body {
   overflow: auto;
-  padding: 1.5rem 0 0 0;
+  padding: 3.5rem 0 0 0;
 }
 body .menu-lateral {
   height: auto;
@@ -78,6 +78,11 @@ body .principal .container-final .final__descricao {
   color: #888888;
 }
 
+@media screen and (max-width: 1440px) {
+  body {
+    padding: 1.5rem 0 0 0;
+  }
+}
 @media screen and (max-width: 1024px) {
   body .cabecalho {
     margin-bottom: 4rem;

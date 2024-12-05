@@ -3,7 +3,7 @@
 
 body {
     overflow: auto;
-    padding: 1.5rem 0 0 0;
+    padding: 3.5rem 0 0 0;
 
     .menu-lateral {
         height: auto;
@@ -97,6 +97,12 @@ body {
     }
 
     
+}
+
+@media screen and (max-width: 1440px) {
+    body {
+        padding: 1.5rem 0 0 0;
+    }
 }
 
 @media screen and (max-width: 1024px) {
