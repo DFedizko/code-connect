@@ -163,7 +163,8 @@ body {
 
 @media screen and (max-width: 1440px) {
     body {
-        @include mixins.centralizar(80%);
+        @include mixins.centralizar(90%);
+        padding-block: 1.5rem;
         overflow: auto;
     }
 }

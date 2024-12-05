@@ -350,8 +350,9 @@ body .principal .principal__formulario .container-botoes .botao-publicar {
 
 @media screen and (max-width: 1440px) {
   body {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
+    padding-block: 1.5rem;
     overflow: auto;
   }
 }
