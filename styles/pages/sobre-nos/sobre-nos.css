@@ -84,6 +84,9 @@ body .principal .container-final .final__descricao {
   }
 }
 @media screen and (max-width: 1024px) {
+  body {
+    padding-top: 2.5rem;
+  }
   body .cabecalho {
     margin-bottom: 4rem;
   }
@@ -96,6 +99,9 @@ body .principal .container-final .final__descricao {
   }
 }
 @media screen and (max-width: 768px) {
+  body {
+    padding-top: 3.5rem;
+  }
   body .cabecalho {
     margin-bottom: 3rem;
   }
