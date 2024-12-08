@@ -3,7 +3,7 @@
 
 body {
     color: white;
-    padding: 3.5rem 0 0 0;
+    padding: 3.5rem 0;
     overflow: auto;
 
     .menu-lateral {
@@ -14,6 +14,7 @@ body {
         flex-direction: column;
         background-color: transparent;
         height: auto;
+        padding: 2rem 0 0 0;
 
         .container-perfil {
             padding: 1rem;
@@ -179,15 +180,17 @@ body {
 
 @media screen and (max-width: 1439px) {
     body {
-        padding: 1.5rem 0 0 0;
+        padding: 1.5rem 0 1.5rem 0;
     }
 }
 
 @media screen and (max-width: 1024px) {
     body {
         padding: 2.5rem 0 20% 0;
+        margin-bottom: 5%;
 
         .principal {
+            padding: 0;
 
             .container-perfil {
                 padding-top: 5rem;
@@ -211,7 +214,6 @@ body {
 
 @media screen and (max-width: 767px) {
     body {
-        margin-bottom: 25%;
         padding-top: 3.5rem;
 
         .principal {
@@ -248,5 +250,11 @@ body {
                 padding-bottom: .5rem;
             }
         }
+    }
+}
+
+@media screen and (max-width: 540px) {
+    body {
+        margin-bottom: 25%;
     }
 }

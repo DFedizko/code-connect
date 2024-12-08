@@ -1,6 +1,6 @@
 body {
   color: white;
-  padding: 3.5rem 0 0 0;
+  padding: 3.5rem 0;
   overflow: auto;
 }
 body .menu-lateral {
@@ -10,6 +10,7 @@ body .principal {
   flex-direction: column;
   background-color: transparent;
   height: auto;
+  padding: 2rem 0 0 0;
 }
 body .principal .container-perfil {
   padding: 1rem;
@@ -153,12 +154,16 @@ body .principal .principal__projetos .projeto .projeto__container .projeto__cont
 
 @media screen and (max-width: 1439px) {
   body {
-    padding: 1.5rem 0 0 0;
+    padding: 1.5rem 0 1.5rem 0;
   }
 }
 @media screen and (max-width: 1024px) {
   body {
     padding: 2.5rem 0 20% 0;
+    margin-bottom: 5%;
+  }
+  body .principal {
+    padding: 0;
   }
   body .principal .container-perfil {
     padding-top: 5rem;
@@ -174,7 +179,6 @@ body .principal .principal__projetos .projeto .projeto__container .projeto__cont
 }
 @media screen and (max-width: 767px) {
   body {
-    margin-bottom: 25%;
     padding-top: 3.5rem;
   }
   body .principal .container-perfil {
@@ -202,5 +206,10 @@ body .principal .principal__projetos .projeto .projeto__container .projeto__cont
     align-items: center;
     gap: 1rem;
     padding-bottom: 0.5rem;
+  }
+}
+@media screen and (max-width: 540px) {
+  body {
+    margin-bottom: 25%;
   }
 }/*# sourceMappingURL=perfil.css.map */
