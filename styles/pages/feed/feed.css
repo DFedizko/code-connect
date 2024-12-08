@@ -1,0 +1,38 @@
+body {
+  grid-template-rows: auto 1fr;
+  grid-template-areas: "aside nav" "aside main";
+}
+body .navegacao {
+  grid-area: nav;
+  display: grid;
+  padding: 0;
+}
+body .menu-lateral {
+  grid-area: aside;
+}
+body .principal {
+  grid-area: main;
+  padding-top: 3rem;
+}
+
+@media screen and (max-width: 1024px) {
+  body .navegacao {
+    padding-top: 4rem;
+  }
+  body .principal {
+    padding-top: 4rem;
+    gap: 2rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  body .navegacao {
+    display: block;
+    padding-top: 3rem;
+  }
+  body .principal {
+    padding-top: 3rem;
+  }
+  body .principal .container-textos {
+    flex-direction: row;
+  }
+}/*# sourceMappingURL=feed.css.map */

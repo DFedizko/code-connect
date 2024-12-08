@@ -1,0 +1,53 @@
+body {
+    grid-template-rows: auto 1fr;
+    grid-template-areas: 
+    "aside nav"
+    "aside main";
+
+    .navegacao {
+        grid-area: nav;
+        display: grid;
+        padding: 0;
+    }
+
+    .menu-lateral {
+        grid-area: aside;
+    }
+
+    .principal {
+        grid-area: main;
+        padding-top: 3rem;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    body {
+
+        .navegacao {
+            padding-top: 4rem;
+        }
+
+        .principal {
+            padding-top: 4rem;
+            gap: 2rem;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    body {
+
+        .navegacao {
+            display: block;
+            padding-top: 3rem;
+        }
+
+        .principal {
+            padding-top: 3rem;
+
+            .container-textos {
+                flex-direction: row;
+            }
+        }
+    }
+}
