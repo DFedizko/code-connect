@@ -112,9 +112,10 @@ body {
             display: flex;
             flex-wrap: wrap;
             gap: 1.5rem;
+            justify-content: space-between;
 
             .projeto {
-                width: 48%;
+                width: 48.3%;
                 background-color: variables.$cinza-escuro;
                 border-radius: 8px;
 

@@ -99,9 +99,10 @@ body .principal .principal__projetos {
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
+  justify-content: space-between;
 }
 body .principal .principal__projetos .projeto {
-  width: 48%;
+  width: 48.3%;
   background-color: #171D1F;
   border-radius: 8px;
 }
