@@ -134,7 +134,7 @@ body {
   color: #888888;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .navegacao {
     padding-block: 3rem;
     text-align: center;
@@ -176,7 +176,7 @@ body {
   font-size: 1.25rem;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .rodape {
     padding-block: 2rem;
     margin-top: 3.5rem;
@@ -348,7 +348,7 @@ body .principal .principal__formulario .container-botoes .botao-publicar {
   font-weight: 600;
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1439px) {
   body {
     width: 90%;
     margin: 0 auto;

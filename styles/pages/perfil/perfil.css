@@ -149,7 +149,7 @@ body .principal .principal__projetos .projeto .projeto__container .projeto__cont
   grid-area: 3/2/4/3;
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1439px) {
   body {
     padding: 1.5rem 0 0 0;
   }
@@ -170,7 +170,7 @@ body .principal .principal__projetos .projeto .projeto__container .projeto__cont
     width: 100%;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   body {
     margin-bottom: 25%;
     padding-top: 3.5rem;
