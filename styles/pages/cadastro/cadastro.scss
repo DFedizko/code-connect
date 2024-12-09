@@ -119,6 +119,26 @@ body {
                 }
             }
 
+            .formulario__label-container {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin: 0.5rem 0 2rem 0;
+
+                .formulario__label-checkbox {
+                    margin: 0;
+                }
+
+                .label-container__descricao {
+                    font-size: .938rem;
+                    cursor: pointer;
+                }
+
+                .label-container__descricao:active {
+                    text-decoration: underline;
+                }
+            }
+
             .formulario__botao {
                 @include mixins.btn-bc-c-fs-bg-w(transparent, variables.$verde-petroleo, 1.125rem, variables.$verde-destaque, 100%);
                 font-weight: 600;
@@ -171,6 +191,21 @@ body {
                     text-decoration: underline;
                 }
             }
+
+            .sem-conta {
+                flex-direction: column;
+                font-size: .938rem;
+                gap: .5rem;
+
+                a {
+                    font-size: 1.125rem;
+                    align-items: start;
+                    
+                    svg {
+                        margin-top: 1px;
+                    }
+                }
+            }
         }
     }
 }
@@ -202,6 +237,11 @@ body {
             .principal__formulario {
                 width: 100%;
             }
+
+            .principal__imagem {
+                height: 415px;
+                object-fit: cover;
+            }
         }
     }
 }
@@ -217,6 +257,10 @@ body {
         .principal {
             width: 90%;
             padding: 2rem 1rem;
+            
+            .principal__imagem {
+                height: 360px;
+            }
 
             .principal__formulario {
                 

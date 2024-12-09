@@ -116,6 +116,22 @@ body .principal .principal__formulario .formulario__label-checkbox .label-checkb
   font-size: 0.938rem;
   color: #888888;
 }
+body .principal .principal__formulario .formulario__label-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0.5rem 0 2rem 0;
+}
+body .principal .principal__formulario .formulario__label-container .formulario__label-checkbox {
+  margin: 0;
+}
+body .principal .principal__formulario .formulario__label-container .label-container__descricao {
+  font-size: 0.938rem;
+  cursor: pointer;
+}
+body .principal .principal__formulario .formulario__label-container .label-container__descricao:active {
+  text-decoration: underline;
+}
 body .principal .principal__formulario .formulario__botao {
   border-color: transparent;
   color: #132E35;
@@ -168,6 +184,18 @@ body .principal .principal__formulario .formulario__descricao a, body .principal
 body .principal .principal__formulario .formulario__descricao a:active {
   text-decoration: underline;
 }
+body .principal .principal__formulario .sem-conta {
+  flex-direction: column;
+  font-size: 0.938rem;
+  gap: 0.5rem;
+}
+body .principal .principal__formulario .sem-conta a {
+  font-size: 1.125rem;
+  align-items: start;
+}
+body .principal .principal__formulario .sem-conta a svg {
+  margin-top: 1px;
+}
 
 @media screen and (max-width: 1024px) {
   body {
@@ -193,6 +221,11 @@ body .principal .principal__formulario .formulario__descricao a:active {
   body .principal .principal__formulario {
     width: 100%;
   }
+  body .principal .principal__imagem {
+    height: 415px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
 }
 @media screen and (max-width: 767px) {
   body {
@@ -204,6 +237,9 @@ body .principal .principal__formulario .formulario__descricao a:active {
   body .principal {
     width: 90%;
     padding: 2rem 1rem;
+  }
+  body .principal .principal__imagem {
+    height: 360px;
   }
   body .principal .principal__formulario .formulario__descricao {
     flex-direction: column;
