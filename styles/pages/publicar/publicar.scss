@@ -122,7 +122,6 @@ body {
                     @extend .formulario-label__input;
                     padding: .25rem .5rem;
                     width: auto;
-                    cursor: pointer;
 
                     .tag__nome {
                         font-size: 1.125rem;
@@ -131,8 +130,8 @@ body {
                         align-items: center;
                         gap: .5rem;
 
-                        svg {
-                            @include mixins.svg-color(variables.$cinza-escuro);
+                        img {
+                            cursor: pointer;
                         }
                     }
                 }

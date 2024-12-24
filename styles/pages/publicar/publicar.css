@@ -303,7 +303,6 @@ body .principal .principal__formulario .tags {
 body .principal .principal__formulario .tags .tag {
   padding: 0.25rem 0.5rem;
   width: auto;
-  cursor: pointer;
 }
 body .principal .principal__formulario .tags .tag .tag__nome {
   font-size: 1.125rem;
@@ -312,8 +311,8 @@ body .principal .principal__formulario .tags .tag .tag__nome {
   align-items: center;
   gap: 0.5rem;
 }
-body .principal .principal__formulario .tags .tag .tag__nome svg path {
-  fill: #171D1F;
+body .principal .principal__formulario .tags .tag .tag__nome img {
+  cursor: pointer;
 }
 body .principal .principal__formulario .tags .tag-clara {
   background-color: #BCBCBC;
