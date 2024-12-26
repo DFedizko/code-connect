@@ -94,11 +94,14 @@
                 <img class="secao__imagem" src="./img/imagem1.png" alt="Dashboard">
             </div>
 
-            <button class="botao-carregar" type="submit">Carregar imagem
+            <button class="botao-carregar" id="upload-btn">
+                Carregar imagem
                 <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0.761719 8.01172L6 2.73828L11.2383 8.01172H8.25V12.5117H3.75V8.01172H0.761719ZM0.761719 0.488281H11.2383V2H0.761719V0.488281Z" fill="#132E35"/>
                 </svg>                    
             </button>
+            <input type="file" id="image-upload" accept="image/png, image/jpeg" style="display: none;" />
+
             <p class="secao__descricao">image_projeto.png
                 <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M8.86523 1.01367L5.37891 4.5L8.86523 7.98633L7.98633 8.86523L4.5 5.37891L1.01367 8.86523L0.134766 7.98633L3.62109 4.5L0.134766 1.01367L1.01367 0.134766L4.5 3.62109L7.98633 0.134766L8.86523 1.01367Z" fill="#888888"/>
@@ -110,39 +113,30 @@
             <h2 class="formulario__titulo">Novo projeto</h2>
             <label class="formulario-label">
                 <h3 class="formulario-label__subtitulo">Nome do projeto</h3>
-                <input class="formulario-label__input" type="text" placeholder="Digite o nome aqui">
+                <input class="formulario-label__input" id="input-nome" type="text" placeholder="Digite o nome aqui">
             </label>
 
             <label class="formulario-label">
                 <h3 class="formulario-label__subtitulo">Descrição</h3>
-                <textarea class="formulario-label__textarea" rows="6" placeholder="Descreva seu projeto"></textarea>
+                <textarea class="formulario-label__textarea" id="input-descricao" rows="6" placeholder="Descreva seu projeto"></textarea>
             </label>
 
             <label class="formulario-label">
                 <h3 class="formulario-label__subtitulo">Tags</h3>
-                <input class="formulario-label__input" type="text" placeholder="Adicione uma tag">
+                <input class="formulario-label__input" type="text" placeholder="Adicione uma tag (Back-end, Front-end, Javascript, etc)" id="input-tags">
 
-                <ul class="tags">
-                    <li class="tag">
-                        <p class="tag__nome">Front-end
-                            <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M8.86523 1.01367L5.37891 4.5L8.86523 7.98633L7.98633 8.86523L4.5 5.37891L1.01367 8.86523L0.134766 7.98633L3.62109 4.5L0.134766 1.01367L1.01367 0.134766L4.5 3.62109L7.98633 0.134766L8.86523 1.01367Z" fill="#888888"/>
-                            </svg>      
-                        </p>
-                    </li>
-                    <li class="tag tag-clara">
-                        <p class="tag__nome">Front-end</p>
-                    </li>
+                <ul class="tags" id="tags">
+                    
                 </ul>    
             </label>
 
             <div class="container-botoes">
-                <button class="botao-descartar">
+                <button class="botao-descartar" id="btn-descartar">
                     Descartar
                     <img src="./img/trash.svg" alt="Descartar">
                 </button>
 
-                <button class="botao-publicar">
+                <button class="botao-publicar" id="btn-publicar">
                     Publicar
                     <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M0.761719 8.01172L6 2.73828L11.2383 8.01172H8.25V12.5117H3.75V8.01172H0.761719ZM0.761719 0.488281H11.2383V2H0.761719V0.488281Z" fill="#132E35"/>
@@ -190,7 +184,7 @@
         </ul>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="./scripts/script.js"></script>
 </body>
 
 </html>
