@@ -1,6 +1,6 @@
 <h1>Code Connect</h1>
 
-Mini rede social de publicação de projetos criada com o intuito de praticar minhas habilidades de JavaScript assíncrono, e praticar o pré-processador CSS SASS.
+  Mini rede social de publicação de projetos criada com o intuito de praticar minhas habilidades em JavaScript e pré-processador SASS.
 
 ![Imagem do Code Connect](img/code-connect-screenshot.png)
 
